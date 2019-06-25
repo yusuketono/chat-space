@@ -49,9 +49,9 @@ Things you may want to cover:
 |------|----|-------|
 |email|string|null: false|
 |encrypted_password|string|null: false|
-|reset_password_token|----|-------|
-|reset_password_sent_at|-------|
-|remenber_created_at|----|-------|
+|reset_password_token|||
+|reset_password_sent_at||
+|remenber_created_at|||
 |created_at|datetime|null: false|
 |update_at|datetime|null: false|
 |nickname|string|null: false|
