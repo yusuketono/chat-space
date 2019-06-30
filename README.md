@@ -14,14 +14,11 @@
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|email|string|null: false|
-|encrypted_password|string|null: false|
-|reset_password_token|||
-|reset_password_sent_at||
 |nickname|string|null: false|
 
 ### Association
 - has_many :messages
+- has_many :members
 - has_many :groups, through: :members
 
 
@@ -32,6 +29,7 @@
 
 ### Association
 - has_many :messages
+- has_many :members
 - has_many :users, through: :members
 
 
