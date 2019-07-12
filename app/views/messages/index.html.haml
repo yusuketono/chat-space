@@ -1,0 +1,48 @@
+.flash-box
+  グループを作成しました
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__box
+        .side-header__box__user-name
+          東野裕輔
+        .side-header__box__menu
+          %a{href: ''}
+            %i.fa.fa-edit
+          %a{href: ''}
+            %i.fa.fa-cog
+    .groups
+      .group
+        %p.group__name
+          サンプル
+        %p.group__massage
+          メッセージ
+
+  .chat-main
+    .main-header
+      .main-header__left
+        %h2.left__current-group
+          サンプル
+        %ul.left__mamber-list
+          Member:東野裕輔
+      .main-header__edit-btn
+        Edit
+    .messages
+      .message
+        .message__upper
+          %p.message__upper__talker
+            東野裕輔
+          %p.message__upper__data
+            2019/07/04(Thu) 10:59:29
+        .message__text
+          これはサンプルです。
+
+    .form
+      %form.new-message{action: "", method: "post", enctype: "multipart/form-data"}
+        .input-box
+          %input.input-box__text{placeholder: "type a massage"}
+          %label.input-box__image
+            %i.fa.fa-image
+            %input.input-box__image__file{type: "file"}
+        %input.submit-btn{type: "submit", value: "Send"}
+    
