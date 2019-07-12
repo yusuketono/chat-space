@@ -135,28 +135,28 @@
               border-style: none;
              }
 
-              &__image {
+            &__image {
                 font-size: 1.3rem;
                 position: absolute;
                 top: 10px;
                 right: 10px;
                 cursor: pointer;
 
-                &__file {
-                  display: none;
-                 }
+              &__file {
+                 display: none;
                }
+             }
            }
          }
-       .submit-btn {
-         width: 100px;
-         height: 50px;
-         padding: 0 30px;
-         margin-left: 15px;
-         background-color: #38aef0;
-         color: white;
-         cursor: pointer;
-         }
+         .submit-btn {
+           width: 100px;
+           height: 50px;
+           padding: 0 30px;
+           margin-left: 15px;
+           background-color: #38aef0;
+           color: white;
+           cursor: pointer;
+           }
      }  
  }
  }
