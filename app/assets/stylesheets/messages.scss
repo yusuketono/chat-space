@@ -29,7 +29,8 @@
             display: flex;
              i {
                color:white; 
-     }
+               margin-left:0.3rem;
+    }
    }
   }
  }
@@ -48,7 +49,7 @@
           }
           &__massage{
             font-size:11px;
-          }
+   }
   }
  }
 }
@@ -64,19 +65,19 @@
       justify-content: space-between;
       border-bottom: solid 1px #eee;
       overflow: scroll;
-        &__left-box {
+        &__left {
           margin-top: 35px;
-           &__current-group {
+           .left__current-group {
              font-size: 20px;
              color: #333;
              margin-bottom: 15px;
-        }
-           &__mamber-list {
+           }
+           .left__mamber-list {
              display: flex;
              font-size: 12px;
              color: #999999;
-      }
-    }
+           }
+          }
         &__edit-btn {
           height: 40px;
           line-height: 40px;
@@ -86,8 +87,8 @@
           color:#38aef0;
           position: absolute;
           right: 40px;
-  }
- }    
+ }
+}    
     .messages {
       height: calc(100vh - 190px);
       padding: 46px 40px;
@@ -95,25 +96,25 @@
       overflow: scroll;
         .message {
           padding-bottom: 40px;
-            &__upper-info {
+            &__upper {
               display: flex;
               margin-bottom: 10px;
               &__talker {
                 color:$FontColor;
                 font-size: 16px;
                 font-weight: bold;
-            }
+              }
               &__data {
                 color: #999999;
                 font-size: 12px;
                 margin-left: 10px;
-          }
-        }
+              } 
+             }
             &__text {
               color:$FontColor;
               font-size: 14px;
               margin-bottom: 10px;
-   }
+  }
  }
 }
     .form{
@@ -142,9 +143,9 @@
 
                 &__file {
                   display: none;
-      }
-    }
+   }
   }
+ }
 }
        .submit-btn {
          width: 100px;
@@ -154,7 +155,7 @@
          background-color: #38aef0;
          color: white;
          cursor: pointer;
-    }
+   }
   }  
  }
 }
