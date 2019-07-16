@@ -4,7 +4,7 @@
 
 .flash-box {
   color: white;
-  background-color:$BackColer;
+  background-color:$side_blue_dark;
   text-align :center;
   width:100vw;
  }
@@ -75,7 +75,7 @@
            .left__mamber-list {
              display: flex;
              font-size: 12px;
-             color: $SubColor;
+             color: $side_blue_light
              }
          }
         &__edit-btn {
@@ -83,8 +83,8 @@
           line-height: 40px;
           padding: 0 20px;
           margin-top: 28px;
-          border: solid 1px $BackColer;
-          color:$BackColer;
+          border: solid 1px $side_blue_dark;
+          color:$side_blue_dark;
           position: absolute;
           right: 40px;
         }
@@ -105,7 +105,7 @@
                 font-weight: bold;
                }
               &__data {
-                color: $SubColor;
+                color: $side_blue_light;
                 font-size: 12px;
                 margin-left: 10px;
                } 
@@ -153,7 +153,7 @@
            height: 50px;
            padding: 0 30px;
            margin-left: 15px;
-           background-color: $BackColer;
+           background-color: $side_blue_dark;
            color: white;
            cursor: pointer;
         }
