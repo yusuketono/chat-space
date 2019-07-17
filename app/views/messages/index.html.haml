@@ -11,14 +11,8 @@
       .main-header__edit-btn
         Edit
     .messages
-      .message
-        .message__upper
-          %p.message__upper__talker
-            東野裕輔
-          %p.message__upper__data
-            2019/07/04(Thu) 10:59:29
-        .message__text
-          これはサンプルです。
+      = render @messages
+      
     .form
       = form_for [@group, @message] do |f|
         .input-box
