@@ -5,9 +5,10 @@
     .main-header
       .main-header__left
         %h2.left__current-group
-          サンプル
+          =@group.name
         %ul.left__mamber-list
-          Member:東野裕輔
+          - @group.group_users.each do |group_user|
+            = group_user.user.name
       .main-header__edit-btn
         Edit
     .messages
