@@ -35,7 +35,7 @@ $(document).on('turbolinks:load', function() {
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html);
-      $("form")[0].reset();  
+      $('#new_message')[0].reset();  
       var target = $('.message').last();
       var position = target.offset().top + $('.messages').scrollTop();
       $('.messages').animate({
