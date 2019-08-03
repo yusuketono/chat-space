@@ -37,7 +37,12 @@ $(document).on('turbolinks:load', function() {
       $('.messages').append(html);
       $('#message_content').val(''); 
       $('#message_image').val(''); 
-    })
+      var target = $('.message').last();
+      var position = target.offset().top + $('.messages').scrollTop();
+      $('.messages').animate({
+        scrollTop: position
+      }, 300, 'swing');
+      })
     .fail(function(data){
       alert('エラーが発生したためメッセージは送信できませんでした。');
     })
@@ -45,11 +50,4 @@ $(document).on('turbolinks:load', function() {
       $('.submit-btn').prop('disabled', false);　//ここで解除している
     })
   })   
-  function scrollBottom(){
-    var target = $('.message').last();
-    var position = target.offset().top + $('.messages').scrollTop();
-    $('.messages').animate({
-      scrollTop: position
-    }, 300, 'swing');
-  }
 });
