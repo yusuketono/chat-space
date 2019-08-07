@@ -27,26 +27,32 @@ $(document).on('turbolinks:load', function() {
   $('#user-search-field').on('input',function(e){
     e.preventDefault(); 
     var input = $('#user-search-field').val();
-    $.ajax({
-      url: '/users',
-      type: 'GET',
-      data: { keyword: input },
-      dataType: 'json',
-    })
-    .done(function(users) {    
+
+    if (input.length === 0) {
       search.empty();
-       if (users.length !== 0) {
-        users.forEach(function(user){
-          appendUser(user);
-        });
-      }
-      else {
-        appendNoUser("一致するユーザーはいません");
-      }
-    })
-    .fail(function() {
-      alert('ユーザー検索に失敗しました');
-    })
+    }
+    else {  
+      $.ajax({
+        url: '/users',
+        type: 'GET',
+        data: { keyword: input },
+        dataType: 'json',
+      })
+      .done(function(users) {    
+        search.empty();
+        if (users.length !== 0) {
+          users.forEach(function(user){
+            appendUser(user);
+          });
+        }
+        else {
+          appendNoUser("一致するユーザーはいません");
+        }
+      })
+      .fail(function() {
+        alert('ユーザー検索に失敗しました');
+      })
+    }
   }); 
 
   search.on("click", ".chat-group-user__btn--add", function(e){
