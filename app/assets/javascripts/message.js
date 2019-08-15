@@ -1,13 +1,13 @@
 $(document).on('turbolinks:load', function() {
   function buildHTML(message) {
-    var content = (message.content) 
+    var content = message.content
     var image = message.image ? `<img src= ${ message.image }>` : "";
     var html = `<div class="message" data-id="${message.id}">
                   <div class="message__upper">
                     <p class="message__upper__talker">
                       ${message.user_name}
                     </p>
-                    <p class="message__upper__date">
+                    <p class="message__upper__data">
                       ${message.date}
                     </p>
                   </div>
