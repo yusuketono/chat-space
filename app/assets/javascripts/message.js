@@ -20,7 +20,6 @@ $(document).on('turbolinks:load', function() {
                 </div>`
   return html;
   }
-
   function scrollBottom(){
     var target = $('.message').last();
     var position = target.offset().top + $('.messages').scrollTop();
@@ -56,15 +55,19 @@ $(document).on('turbolinks:load', function() {
   })
   
   var reloadMessages = function() {
-    if (window.location.href.match(/\/groups\/\d+\/messages/)){
+    if($('.messages')[0]){
       var last_message_id = $('.message:last').data('id');
+    } 
+    else {
+      var last_message_id = 0
+    }
+    if (window.location.href.match(/\/groups\/\d+\/messages/)){
       $.ajax({
         url: "api/messages",
         type: 'get',
         dataType: 'json',
         data: {id: last_message_id}
         })
-
       .done(function(messages) {
         var HTML = '';
         messages.forEach(function(message){
@@ -76,7 +79,7 @@ $(document).on('turbolinks:load', function() {
       .fail(function() {
         alert('error');
       })
-    }
+    } 
   }
   setInterval(reloadMessages, 5000);   
 });
