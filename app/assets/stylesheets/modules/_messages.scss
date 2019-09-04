@@ -87,6 +87,9 @@
           color:$side_blue_dark;
           position: absolute;
           right: 40px;
+          .EDIT{
+            text-decoration: none;
+          }
         }
       }
     .messages {
