@@ -83,12 +83,13 @@
           line-height: 40px;
           padding: 0 20px;
           margin-top: 28px;
-          border: solid 1px $side_blue_dark;
+          border: solid 1px skyblue;;
           color:$side_blue_dark;
           position: absolute;
           right: 40px;
           .EDIT{
             text-decoration: none;
+            color: skyblue;
           }
         }
       }
